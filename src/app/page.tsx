@@ -52,7 +52,7 @@ export default function Home() {
             onChange={(e) => setYoutubeUrl(e.target.value)} // Update state when user types
             placeholder="Enter YouTube video URL..."
             required // Make the field mandatory
-            className="flex-grow p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            className="flex-grow p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-black"
             disabled={isLoading} // Disable input while loading
           />
           <button
@@ -84,11 +84,11 @@ export default function Home() {
       {/* Results Section */}
       {notes && !isLoading && ( // Only show notes if they exist and not loading
         <div className="w-full max-w-lg mt-4 bg-white p-6 border border-gray-200 rounded-md shadow">
-          <h2 className="text-xl font-semibold mb-3 text-gray-700">Generated Notes:</h2>
+          <h2 className="text-xl font-semibold mb-3 text-black">Generated Notes:</h2>
           <textarea
             readOnly // Make it non-editable
             value={notes}
-            className="w-full h-64 p-3 border border-gray-300 rounded-md bg-gray-50 font-mono text-sm" // Basic styling for notes display
+            className="w-full h-64 p-3 border border-gray-300 rounded-md bg-gray-50 font-mono text-sm text-black" // Basic styling for notes display
             placeholder="Notes will appear here..."
           />
           {/* Add Copy/Download buttons here later */}
